@@ -297,3 +297,4 @@
         })();
     </script>
 </header>
+    <div class="site-header-spacer" aria-hidden="true"></div>

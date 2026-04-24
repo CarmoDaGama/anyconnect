@@ -151,8 +151,8 @@ body[data-aos-duration="6500"] [data-aos],
 /* section-sobre */
 .section-sobre {
     position: relative;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .overlay-sobre {
@@ -256,7 +256,49 @@ body[data-aos-duration="6500"] [data-aos],
 .block-newsletter {
     width: 100%;
     display: flex;
-    gap: 8px;
+    gap: 10px;
+    align-items: center;
+}
+
+.block-newsletter #emailInput {
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.97) 0%, rgba(247, 250, 248, 0.96) 100%);
+    color: #173428;
+    border-radius: 999px;
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    transition:
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease,
+        background-color 0.25s ease;
+}
+
+.block-newsletter #emailInput::placeholder {
+    color: #5f6f68;
+    opacity: 1;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.block-newsletter #emailInput:hover {
+    border-color: rgba(135, 193, 69, 0.46);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+.block-newsletter #emailInput:focus,
+.block-newsletter #emailInput:focus-visible {
+    outline: none;
+    border-color: rgba(135, 193, 69, 0.86);
+    box-shadow:
+        0 0 0 4px rgba(135, 193, 69, 0.22),
+        0 14px 32px rgba(0, 0, 0, 0.17),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    transform: translateY(-1px);
 }
 
 .block-newsletter button:hover {
@@ -265,6 +307,11 @@ body[data-aos-duration="6500"] [data-aos],
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .section-sobre {
+        padding-top: 88px;
+        padding-bottom: 88px;
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -292,6 +339,11 @@ body[data-aos-duration="6500"] [data-aos],
 }
 
 @media (max-width: 480px) {
+    .section-sobre {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
     .video-container {
         position: relative;
         width: 100%;

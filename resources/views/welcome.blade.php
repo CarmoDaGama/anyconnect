@@ -38,28 +38,10 @@
 </head>
 
 <body>
-    <div class="video-container position-relative">
-        @if ($banner)
-            <video autoplay muted loop class="background-video">
-                <source src="{{ asset('storage/' . $banner->video) }}" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-        @else
-            <video autoplay muted loop class="background-video">
-                <source src="{{ asset('video/videoplayback-data.mp4') }}" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-        @endif
-
-        <!-- Enhanced overlay with gradient -->
-        <div class="overlay-modern"></div>
-
-        <!-- Modern navbar with glassmorphism effect -->
+    <section class="hero-carousel-wrap position-relative">
         <x-header />
-
-        <!-- content -->
         <x-hero-content />
-    </div>
+    </section>
 
     <main>
         <!-- Services Section - Conectividade -->
@@ -257,7 +239,7 @@
 
         <!-- sobre nos  -->
         <section class="section-sobre"
-            style="background: url('/assets/images/sobre-nos.jpg') center center/cover no-repeat;">
+            style="background: url('/assets/images/sobre-nos.jpg') center 22%/cover no-repeat;">
 
             <!-- overlay -->
             <div class="overlay-sobre position-absolute top-0 start-0 w-100 h-100"></div>
