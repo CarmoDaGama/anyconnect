@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class Category extends Model
+{
+    use HasFactory;
+
+    public function noticias(): HasMany
+    {
+        return $this->hasMany(Noticia::class, 'category_id');
+    }
+
+    public function imprensas(): HasMany
+    {
+        return $this->hasMany(Imprensa::class, 'category_id');
+    }
+}

@@ -1,0 +1,79 @@
+
+
+/* Outros estilos */
+
+.nunito-100{
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Imprensa Página Inicial */
+
+.img-bg {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden; /* Garante que elementos não escapem do container */
+}
+
+.img-main {
+    height: 450px;
+}
+
+.img-small {
+    height: 220px;
+}
+
+/* Overlay para o texto */
+
+.overlay-imprensa {
+    background-color: rgba(135, 193, 69,1); /* Fundo verde com transparência */
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Garante que cobre toda a largura da imagem */
+    border-radius: 30px; /* Bordas arredondadas apenas na parte inferior */
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+/* Media Query | Correções */
+
+
+@media only screen and (max-width: 767px) {
+    .sizing-imprensa{
+        margin-bottom: 8px;
+    }
+  }
+@media only screen and (max-width: 991px) {
+    .disabilitar-menu{
+        display: none !important;
+    }
+}
+
+
+/* Slick Carrousel - Parceiros */
+
+.partners-slider img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.slick-slide {
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+.slick-slide img {
+    margin: 0 auto; /* Garante que a imagem fique centralizada */
+    max-width: 100%; /* Evita que a imagem ultrapasse os limites */
+    height: auto; /* Mantém as proporções */
+}
+
+
