@@ -324,9 +324,9 @@
 }
 
 .form-feedback.success {
-  background: rgba(40, 167, 69, 0.2);
-  border: 1px solid rgba(40, 167, 69, 0.3);
-  color: #28a745;
+  background: rgba(166, 255, 77, 0.2);
+  border: 1px solid rgba(166, 255, 77, 0.3);
+  color: #a6ff4d;
 }
 
 .form-feedback.error {

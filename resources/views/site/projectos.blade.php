@@ -53,7 +53,7 @@
 
         .modal-body p {
             font-size: 1.1rem;
-            color: #555;
+            color: #4b4b4b;
             line-height: 1.6;
         }
 

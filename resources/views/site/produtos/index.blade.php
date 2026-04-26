@@ -6,7 +6,7 @@
             --primary-color: #a6ff4d;
             --primary-gradient: linear-gradient(135deg, #a6ff4d 0%, #002852 100%);
             --secondary-color: #002852;
-            --text-color: #333;
+            --text-color: #4b4b4b;
             --light-bg: #f8fafc;
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             --card-hover-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);

@@ -28,6 +28,10 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Swiper Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Animate Css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -44,202 +48,79 @@
     </section>
 
     <main>
-        <!-- Services Section - Conectividade -->
-        <section class="services-section connectivity-section py-5" id="conectividade">
+        <!-- Unified Services Section with Tabs -->
+        <section class="services-tabs-section" id="servicos">
             <div class="container">
-                <!-- Section Header -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <div class="section-badge mb-3">
-                            <span class="badge-text">
-                                <span class="badge-dot"></span>
-                                Conectividade
-                            </span>
-                        </div>
-                        <h2 class="section-title mb-4">Soluções de Conectividade Avançada</h2>
-                        <p class="section-description">
-                            Oferecemos infraestrutura robusta e confiável para manter sua empresa sempre conectada
-                        </p>
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <div class="section-badge mb-3">
+                        <span class="badge-text">Inovação e Qualidade</span>
+                    </div>
+                    <h2 class="section-title">Nossos Serviços</h2>
+                    <p class="section-description">
+                        Soluções completas e integradas para impulsionar a transformação digital do seu negócio.
+                    </p>
+                </div>
+
+                <div class="tabs-container" data-aos="fade-up">
+                    <div class="tabs-list" role="tablist">
+                        @foreach ($categorias as $categoria)
+                            <button class="tab-trigger {{ $loop->first ? 'active' : '' }}" role="tab"
+                                data-tab="tab-{{ $categoria->id }}"
+                                aria-selected="{{ $loop->first ? 'true' : 'false' }}">
+                                {{ $categoria->nome }}
+                            </button>
+                        @endforeach
                     </div>
                 </div>
 
-                <!-- Services Cards -->
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-card h-100">
-                            <div class="service-icon">
-                                <i class="fas fa-wifi"></i>
-                            </div>
-                            <h4 class="service-title">Internet</h4>
-                            <p class="service-description">
-                                Conexão de alta velocidade com garantia de uptime e suporte 24/7
-                            </p>
-                            <div class="service-features">
-                                <span class="feature-tag">Alta Velocidade</span>
-                                <span class="feature-tag">99.9% Uptime</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-card h-100">
-                            <div class="service-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <h4 class="service-title">IP Transit</h4>
-                            <p class="service-description">Conectividade global com roteamento otimizado e baixa
-                                latência</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Global</span>
-                                <span class="feature-tag">Baixa Latência</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-card h-100">
-                            <div class="service-icon">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <h4 class="service-title">MPLS Level 2 & 3</h4>
-                            <p class="service-description">Redes privadas virtuais com qualidade de serviço garantida
-                            </p>
-                            <div class="service-features">
-                                <span class="feature-tag">QoS</span>
-                                <span class="feature-tag">Seguro</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-card h-100">
-                            <div class="service-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h4 class="service-title">VPN</h4>
-                            <p class="service-description">Conexões seguras e criptografadas para acesso remoto</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Criptografado</span>
-                                <span class="feature-tag">Remoto</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <!-- Services Section - Datacenter -->
-        <section class="services-section datacenter-section py-5" id="datacenter">
-            <div class="container">
-                <!-- Section Header -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <div class="section-badge mb-3">
-                            <span class="badge-text">Datacenter</span>
-                        </div>
-                        <h2 class="section-title mb-4">Infraestrutura de Datacenter</h2>
-                        <p class="section-description">
-                            Soluções completas de hospedagem e cloud computing para sua empresa
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Services Cards -->
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card premium-card h-100">
-                            <div class="service-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <h4 class="service-title">Multiclouds</h4>
-                            <p class="service-description">Soluções híbridas e multi-cloud para máxima flexibilidade e
-                                redundância</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Híbrido</span>
-                                <span class="feature-tag">Escalável</span>
-                                <span class="feature-tag">Redundante</span>
-                            </div>
-                            <div class="premium-badge">Premium</div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card premium-card h-100">
-                            <div class="service-icon">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <h4 class="service-title">Colocation & Hosting</h4>
-                            <p class="service-description">Hospedagem segura com infraestrutura de classe mundial</p>
-                            <div class="service-features">
-                                <span class="feature-tag">Seguro</span>
-                                <span class="feature-tag">24/7</span>
-                                <span class="feature-tag">Monitorado</span>
-                            </div>
-                            <div class="premium-badge">Premium</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section - VODUSSD -->
-        <section class="services-section vodussd-section py-5" id="vodussd">
-            <div class="container">
-                <!-- Section Header -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <div class="section-badge mb-3">
-                            <span class="badge-text">USSD</span>
-                        </div>
-                        <h2 class="section-title mb-4">Serviços VOD & USSD</h2>
-                        <p class="section-description">Soluções inovadoras de comunicação e entretenimento digital</p>
-                    </div>
-                </div>
-
-                <!-- Interactive Feature Card -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="feature-card interactive-card">
-                            <div class="card-background"></div>
-                            <div class="card-content">
-                                <div class="feature-icon">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </div>
-                                <h3 class="feature-title">USSD Services</h3>
-                                <p class="feature-description">
-                                    Plataforma integrada de serviços de voz, dados e entretenimento digital com
-                                    tecnologia de ponta
-                                </p>
-
-                                <div class="feature-highlights">
-                                    <div class="highlight-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Comunicação Unificada</span>
+                <div class="tabs-content" data-aos="fade-up">
+                    @foreach ($categorias as $categoria)
+                        <div class="tabs-content-item {{ $loop->first ? 'active' : '' }}" id="tab-{{ $categoria->id }}"
+                            role="tabpanel">
+                            <div class="swiper-container-wrapper">
+                                <div class="swiper swiper-services-{{ $categoria->id }}">
+                                    <div class="swiper-wrapper">
+                                        @foreach ($categoria->servicos as $servico)
+                                            <div class="swiper-slide">
+                                                <div class="service-card-modern" onclick="window.location.href='{{ route('servico.show', $servico->slug) }}'">
+                                                    <div class="card-image-wrapper"
+                                                        style="background-image: url('{{ asset('storage/' . ($servico->cover ?? 'img/default-service.jpg')) }}');">
+                                                        <div class="card-image-overlay"></div>
+                                                    </div>
+                                                    <div class="card-body-modern">
+                                                        <h4 class="card-title-modern">{{ $servico->title }}</h4>
+                                                        <p class="card-description-modern">
+                                                            {!! Str::limit(strip_tags($servico->content ?? 'Soluções avançadas para o seu negócio.'), 100) !!}
+                                                        </p>
+                                                        <a href="{{ route('servico.show', $servico->slug) }}"
+                                                            class="card-link-modern">
+                                                            Saiba mais <i class="fas fa-arrow-right"></i>
+                                                        </a>
+                                                    </div>
+                                                    <button class="card-button-modern"
+                                                        onclick="event.stopPropagation(); window.location.href='{{ route('navigation.contactos') }}'">
+                                                        Contactar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        @endforeach
                                     </div>
-                                    <div class="highlight-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Entretenimento Digital</span>
-                                    </div>
-                                    <div class="highlight-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Tecnologia Avançada</span>
-                                    </div>
+                                    <!-- Navigation -->
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <!-- Pagination -->
+                                    <div class="swiper-pagination"></div>
                                 </div>
                             </div>
-
-
-                            <a href="/produtos-e-servicos/vod" class="cta-button">
-                                <span>Saiba Mais</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
 
         <!-- sobre nos  -->
         <section class="section-sobre"
-            style="background: url('/assets/images/sobre-nos.jpg') center 22%/cover no-repeat;">
+            style="background: url('{{ asset('assets/images/sobre-nos.jpg') }}') center 22%/cover no-repeat;">
 
             <!-- overlay -->
             <div class="overlay-sobre position-absolute top-0 start-0 w-100 h-100"></div>
@@ -900,7 +781,65 @@
     <script>
         AOS.init();
     </script>
-     <!--Start of Tawk.to Script-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching logic
+            const tabTriggers = document.querySelectorAll('.tab-trigger');
+            const tabContents = document.querySelectorAll('.tabs-content-item');
+
+            tabTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const target = this.getAttribute('data-tab');
+
+                    // Update active trigger
+                    tabTriggers.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Update active content
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === target) {
+                            content.classList.add('active');
+                            // Re-initialize swiper if needed or update it
+                            const swiperEl = content.querySelector('.swiper');
+                            if (swiperEl && swiperEl.swiper) {
+                                swiperEl.swiper.update();
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Swiper initialization for each category
+            @foreach ($categorias as $categoria)
+                new Swiper('.swiper-services-{{ $categoria->id }}', {
+                    slidesPerView: 1,
+                    spaceBetween: 25,
+                    loop: false,
+                    pagination: {
+                        el: '.swiper-services-{{ $categoria->id }} .swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-services-{{ $categoria->id }} .swiper-button-next',
+                        prevEl: '.swiper-services-{{ $categoria->id }} .swiper-button-prev',
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                        },
+                    }
+                });
+            @endforeach
+        });
+    </script>
+    <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){

@@ -1342,3 +1342,231 @@ body[data-aos-duration="6500"] [data-aos],
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+/* Modern Tabs & Swiper Services */
+.services-tabs-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.tabs-container {
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+
+.tabs-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.tabs-list::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-trigger {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4b4b4b;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.tab-trigger:hover {
+    color: #a6ff4d;
+}
+
+.tab-trigger.active {
+    color: #002852;
+    border-bottom-color: #a6ff4d;
+}
+
+.tabs-content-item {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.tabs-content-item.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Service Card Modern */
+.service-card-modern {
+    background: #121418;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 420px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(166, 255, 77, 0.15);
+}
+
+.card-image-wrapper {
+    height: 260px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.service-card-modern:hover .card-image-wrapper {
+    transform: scale(1.05);
+}
+
+.card-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(18, 20, 24, 0.8) 70%, #121418 100%);
+}
+
+.card-body-modern {
+    padding: 25px;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 2;
+}
+
+.service-card-modern:hover .card-body-modern {
+    top: 140px;
+}
+
+.card-title-modern {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-description-modern {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.service-card-modern:hover .card-description-modern {
+    opacity: 1;
+}
+
+.card-link-modern {
+    color: #a6ff4d;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    transition: gap 0.3s ease;
+}
+
+.card-link-modern:hover {
+    gap: 12px;
+    color: #ffffff;
+}
+
+.card-button-modern {
+    width: 100%;
+    padding: 15px;
+    background-color: #a6ff4d;
+    color: #002852;
+    border: none;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 3;
+}
+
+.service-card-modern:hover .card-button-modern {
+    transform: translateY(0);
+}
+
+/* Swiper Controls */
+.swiper-container-wrapper {
+    position: relative;
+    padding: 0 40px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #a6ff4d !important;
+    background: rgba(255, 255, 255, 0.05);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(166, 255, 77, 0.2);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: #a6ff4d;
+    color: #002852 !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+}
+
+.swiper-pagination {
+    bottom: -40px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #4b4b4b !important;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    background: #a6ff4d !important;
+    opacity: 1;
+    width: 30px;
+    border-radius: 5px;
+}

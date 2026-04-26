@@ -53,15 +53,15 @@
 
     <div class="container pt-2 mb-4">
         <p style="font-size: 15px;">
-            <span style="margin-right: 20px; color: #757575;">
+            <span style="margin-right: 20px; color: #4b4b4b;">
                 <i style="color: #a6ff4d;" class="fas fa-clock"></i>
                 {{ $noticia->created_at->diffForHumans() }}
             </span>
-            <span style="margin-right: 20px; color: #757575;">
+            <span style="margin-right: 20px; color: #4b4b4b;">
                 <i style="color: #a6ff4d;" class="fas fa-eye"></i>
                 {{ $noticia->views }}
             </span>
-            <span style="margin-right: 20px; color: #757575;">
+            <span style="margin-right: 20px; color: #4b4b4b;">
                 <i style="color: #a6ff4d;" class="fas fa-calendar"></i>
                 {{ $noticia->created_at->format('d M Y') }}
             </span>

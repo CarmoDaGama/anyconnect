@@ -43,7 +43,7 @@
             </ul>
         </div>
         <div class="col"  data-aos="zoom-in" data-aos-duration="1400" >
-            <form action=""  style="border: 1px solid #dddddd76; padding: 30px; border-radius: 5px;">
+            <form action=""  style="border: 1px solid #4b4b4b; padding: 30px; border-radius: 5px;">
                 <input type="text" style="height: 50px;" class="form-control mb-4" name="" placeholder="Nome Completo">
                 <input type="text" style="height: 50px;" class="form-control mb-4" name="" placeholder="E-mail">
                 <textarea name="" id="" rows="5" class="form-control">Mensagem</textarea>

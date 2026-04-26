@@ -30,7 +30,7 @@
     }
 
     .nav-link-modern {
-        color: #333 !important;
+        color: #4b4b4b !important;
         font-weight: 500;
         margin: 0 10px;
         padding: 8px 16px !important;
