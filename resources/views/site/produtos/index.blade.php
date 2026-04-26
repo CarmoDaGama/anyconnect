@@ -3,9 +3,9 @@
 @section('styles')
     <style>
         :root {
-            --primary-color: #87C145;
-            --primary-gradient: linear-gradient(135deg, #87C145 0%, #6fa835 100%);
-            --secondary-color: #2c3e50;
+            --primary-color: #a6ff4d;
+            --primary-gradient: linear-gradient(135deg, #a6ff4d 0%, #002852 100%);
+            --secondary-color: #002852;
             --text-color: #333;
             --light-bg: #f8fafc;
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -15,7 +15,7 @@
         }
 
         .background-container {
-            background: linear-gradient(135deg, rgba(135, 193, 69, 0.1) 0%, rgba(111, 168, 53, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(166, 255, 77, 0.1) 0%, rgba(0, 40, 82, 0.05) 100%);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -63,7 +63,7 @@
         }
 
         .subtitle {
-            color: #666;
+            color: #4b4b4b;
             font-size: 1.1rem;
             line-height: 1.6;
             max-width: 600px;
@@ -126,7 +126,7 @@
         }
 
         .card-text {
-            color: #666;
+            color: #4b4b4b;
             line-height: 1.6;
             margin-bottom: 1rem;
         }
@@ -142,7 +142,7 @@
         }
 
         .card-link:hover {
-            color: #6fa835;
+            color: #002852;
             transform: translateX(5px);
         }
 
@@ -166,7 +166,7 @@
         }
 
         .hero-description {
-            color: #666;
+            color: #4b4b4b;
             line-height: 1.7;
             font-size: 1.1rem;
         }
@@ -180,7 +180,7 @@
         .hero-image img {
             max-width: 100%;
             height: auto;
-            filter: drop-shadow(0 10px 30px rgba(135, 193, 69, 0.2));
+            filter: drop-shadow(0 10px 30px rgba(166, 255, 77, 0.2));
         }
 
         .breadcrumb-section {
@@ -205,7 +205,7 @@
         }
 
         .breadcrumb-content p {
-            color: #666;
+            color: #4b4b4b;
             margin: 0.5rem 0 0 0;
         }
 
@@ -220,12 +220,12 @@
             align-items: center;
             gap: 0.5rem;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(135, 193, 69, 0.3);
+            box-shadow: 0 4px 15px rgba(166, 255, 77, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(135, 193, 69, 0.4);
+            box-shadow: 0 8px 25px rgba(166, 255, 77, 0.4);
             color: white;
         }
 

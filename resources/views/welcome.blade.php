@@ -296,24 +296,28 @@
 
                         <!-- Lado Direito (Card Notícia) -->
                         <div class="col-lg-5" data-aos="fade-left">
-                            <div class="card border-0 shadow-lg h-100" style="border-radius: 16px; overflow: hidden;">
+                            @php
+                                $imprensaCoverUrl = $imprensa->cover && \Illuminate\Support\Facades\Storage::disk('public')->exists($imprensa->cover)
+                                    ? asset('storage/' . $imprensa->cover)
+                                    : asset('assets/images/sobre-nos.jpg');
+                            @endphp
+
+                            <div class="card border-0 shadow-lg h-100 imprensa-highlight-card">
                                 <!-- Imagem da Notícia -->
-                                @if ($imprensa->cover)
-                                    <img src="{{ asset('storage/' . $imprensa->cover) }}" class="card-img-top"
-                                        alt="{{ $imprensa->title }}">
-                                @endif
+                                <img src="{{ $imprensaCoverUrl }}" class="card-img-top imprensa-highlight-image"
+                                    alt="{{ $imprensa->title }}">
 
                                 <div class="card-body p-4">
-                                    <span class="badge bg-success mb-2">Destaque</span>
-                                    <h5 class="card-title fw-bold">
+                                    <span class="badge mb-2 imprensa-highlight-badge">Destaque</span>
+                                    <h5 class="card-title fw-bold imprensa-highlight-title">
                                         {{ $imprensa->title }}
                                     </h5>
-                                    <p class="card-text text-muted small">
+                                    <p class="card-text small imprensa-highlight-text">
                                         {{ \Illuminate\Support\Str::limit(strip_tags(html_entity_decode($imprensa->content)), 120, '...') }}
                                     </p>
 
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <small class="text-muted">
+                                        <small class="imprensa-highlight-date">
                                             <i class="far fa-calendar-alt me-1"></i>
                                             {{ \Carbon\Carbon::parse($imprensa->created_at)->format('d M Y') }}
                                         </small>
@@ -674,8 +678,8 @@
                 activeMenu = menu;
 
                 // Add active styling to trigger
-                trigger.style.backgroundColor = 'rgba(135, 193, 69, 0.1)';
-                trigger.style.color = '#87c145';
+                trigger.style.backgroundColor = 'rgba(166, 255, 77, 0.1)';
+                trigger.style.color = '#a6ff4d';
             }
 
             function hideMenu() {
@@ -782,8 +786,8 @@
                 activeMenu = menu;
 
                 // Add visual feedback
-                trigger.style.background = 'rgba(135, 193, 69, 0.08)';
-                trigger.style.color = '#87c145';
+                trigger.style.background = 'rgba(166, 255, 77, 0.08)';
+                trigger.style.color = '#a6ff4d';
             }
 
             // Hide menu function

@@ -54,15 +54,15 @@
     <div class="container pt-2 mb-4">
         <p style="font-size: 15px;">
             <span style="margin-right: 20px; color: #757575;">
-                <i style="color: #87C145;" class="fas fa-clock"></i>
+                <i style="color: #a6ff4d;" class="fas fa-clock"></i>
                 {{ $noticia->created_at->diffForHumans() }}
             </span>
             <span style="margin-right: 20px; color: #757575;">
-                <i style="color: #87C145;" class="fas fa-eye"></i>
+                <i style="color: #a6ff4d;" class="fas fa-eye"></i>
                 {{ $noticia->views }}
             </span>
             <span style="margin-right: 20px; color: #757575;">
-                <i style="color: #87C145;" class="fas fa-calendar"></i>
+                <i style="color: #a6ff4d;" class="fas fa-calendar"></i>
                 {{ $noticia->created_at->format('d M Y') }}
             </span>
         </p>
@@ -90,19 +90,19 @@
                     <span style="font-weight: 700; font-size: 15px; text-transform: uppercase;">Informação</span>
                     <ul class="list-unstyled mt-3">
                         <li class="mt-2" style="font-weight: 300;">
-                            <i class="fas fa-location-arrow" style="color: #87c145; margin-right: 5px;"></i>
+                            <i class="fas fa-location-arrow" style="color: #a6ff4d; margin-right: 5px;"></i>
                             Belas Business Park, Ed. Bengo, 3º andar, Apt 305.
                         </li>
                         <li class="mt-2" style="font-weight: 300;">
-                            <i class="fas fa-phone-volume" style="color: #87c145; margin-right: 5px;"></i>
+                            <i class="fas fa-phone-volume" style="color: #a6ff4d; margin-right: 5px;"></i>
                             (+244) 950 555 010
                         </li>
                         <li class="mt-2" style="font-weight: 300;">
-                            <i class="fas fa-envelope-square" style="color: #87c145; margin-right: 5px;"></i>
+                            <i class="fas fa-envelope-square" style="color: #a6ff4d; margin-right: 5px;"></i>
                             comercial@anyconnect.co.ao
                         </li>
                         <li class="mt-2" style="font-weight: 300;">
-                            <i class="fas fa-envelope-square" style="color: #87c145; margin-right: 5px;"></i>
+                            <i class="fas fa-envelope-square" style="color: #a6ff4d; margin-right: 5px;"></i>
                             suporte@anyconnect.co.ao
                         </li>
                     </ul>
@@ -114,25 +114,25 @@
                     <ul class="list-unstyled mt-3">
                         <li class="mt-2" style="font-weight: 300;">
                             <a href="about.html" style="text-decoration: none; color: white;">
-                                <i class="fas fa-angle-right" style="color: #87c145; margin-right: 5px;"></i>
+                                <i class="fas fa-angle-right" style="color: #a6ff4d; margin-right: 5px;"></i>
                                 Sobre Nós
                             </a>
                         </li>
                         <li class="mt-2" style="font-weight: 300;">
                             <a href="#" style="text-decoration: none; color: white;">
-                                <i class="fas fa-angle-right" style="color: #87c145; margin-right: 5px;"></i>
+                                <i class="fas fa-angle-right" style="color: #a6ff4d; margin-right: 5px;"></i>
                                 Organigrama
                             </a>
                         </li>
                         <li class="mt-2" style="font-weight: 300;">
                             <a href="services.html" style="text-decoration: none; color: white;">
-                                <i class="fas fa-angle-right" style="color: #87c145; margin-right: 5px;"></i>
+                                <i class="fas fa-angle-right" style="color: #a6ff4d; margin-right: 5px;"></i>
                                 Produtos e Serviços
                             </a>
                         </li>
                         <li class="mt-2" style="font-weight: 300;">
                             <a href="contactos.html" style="text-decoration: none; color: white;">
-                                <i class="fas fa-angle-right" style="color: #87c145; margin-right: 5px;"></i>
+                                <i class="fas fa-angle-right" style="color: #a6ff4d; margin-right: 5px;"></i>
                                 Contactos
                             </a>
                         </li>
@@ -144,11 +144,11 @@
                     <span style="font-weight: 700; font-size: 15px; text-transform: uppercase;">Siga-nos</span>
                     <div class="d-flex justify-content-start gap-3 mt-3">
                         <a href="https://www.facebook.com/AnyConnectTelecom" target="_blank"><i
-                                class="fab fa-facebook-f" style="color: #87c145; font-size: 1.5rem;"></i></a>
+                                class="fab fa-facebook-f" style="color: #a6ff4d; font-size: 1.5rem;"></i></a>
                         <a href="https://www.instagram.com/anyconnecttelecom/" target="_blank"><i
-                                class="fab fa-instagram" style="color: #87c145; font-size: 1.5rem;"></i></a>
+                                class="fab fa-instagram" style="color: #a6ff4d; font-size: 1.5rem;"></i></a>
                         <a href="https://www.linkedin.com/company/anyconnectangola" target="_blank"><i
-                                class="fab fa-linkedin" style="color: #87c145; font-size: 1.5rem;"></i></a>
+                                class="fab fa-linkedin" style="color: #a6ff4d; font-size: 1.5rem;"></i></a>
                     </div>
                 </div>
             </div>

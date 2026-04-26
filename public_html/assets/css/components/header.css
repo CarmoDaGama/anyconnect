@@ -1,9 +1,9 @@
 :root {
-    --clr-brand: #87c145;
-    --clr-brand-dark: #6fa832;
-    --clr-brand-deeper: #5a8c2a;
-    --clr-brand-tint: rgba(135, 193, 69, 0.1);
-    --clr-brand-glow: rgba(135, 193, 69, 0.3);
+    --clr-brand: #a6ff4d;
+    --clr-brand-dark: #002852;
+    --clr-brand-deeper: #002852;
+    --clr-brand-tint: rgba(166, 255, 77, 0.1);
+    --clr-brand-glow: rgba(166, 255, 77, 0.3);
     --clr-text: #1a1a1a;
     --clr-text-muted: #555;
     --clr-surface: rgba(255, 255, 255, 0.96);
@@ -252,7 +252,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--clr-brand);
-    border-bottom: 1px solid rgba(135, 193, 69, 0.2);
+    border-bottom: 1px solid rgba(166, 255, 77, 0.2);
     margin-bottom: 4px;
 }
 
@@ -291,7 +291,7 @@
         var(--clr-brand-dark),
         var(--clr-brand-deeper)
     );
-    box-shadow: 0 6px 20px rgba(135, 193, 69, 0.45);
+    box-shadow: 0 6px 20px rgba(166, 255, 77, 0.45);
     transform: translateY(-1px);
     color: #fff;
 }
@@ -323,7 +323,7 @@
 }
 
 .nav__hamburger:hover {
-    background: rgba(135, 193, 69, 0.18);
+    background: rgba(166, 255, 77, 0.18);
 }
 
 .nav__hamburger:focus-visible {

@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  background: linear-gradient(135deg, #1a5f3f 0%, #2d8f5f 50%, #87c145 100%);
+  background: linear-gradient(135deg, #002852 0%, #4b4b4b 50%, #a6ff4d 100%);
 }
 
 .newsletter-bg {
@@ -28,7 +28,7 @@
     135deg,
     rgba(26, 95, 63, 0.9) 0%,
     rgba(45, 143, 95, 0.8) 50%,
-    rgba(135, 193, 69, 0.7) 100%
+    rgba(166, 255, 77, 0.7) 100%
   );
   z-index: 2;
 }
@@ -129,7 +129,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(45deg, #87c145, #a8d96e);
+  background: linear-gradient(45deg, #a6ff4d, #a6ff4d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -158,7 +158,7 @@
 .noc-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(45deg, #87c145, #a8d96e);
+  background: linear-gradient(45deg, #a6ff4d, #a6ff4d);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -166,7 +166,7 @@
   margin: 0 auto;
   font-size: 2rem;
   color: white;
-  box-shadow: 0 10px 30px rgba(135, 193, 69, 0.3);
+  box-shadow: 0 10px 30px rgba(166, 255, 77, 0.3);
 }
 
 .features-list {
@@ -192,7 +192,7 @@
 }
 
 .feature-item i {
-  color: #87c145;
+  color: #a6ff4d;
   margin-right: 8px;
   font-size: 16px;
 }
@@ -224,8 +224,8 @@
 }
 
 .input-group:focus-within {
-  border-color: #87c145;
-  box-shadow: 0 0 30px rgba(135, 193, 69, 0.3);
+  border-color: #a6ff4d;
+  box-shadow: 0 0 30px rgba(166, 255, 77, 0.3);
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -241,7 +241,7 @@
 }
 
 .input-group:focus-within .input-icon {
-  color: #87c145;
+  color: #a6ff4d;
 }
 
 .newsletter-input {
@@ -265,7 +265,7 @@
 }
 
 .newsletter-btn {
-  background: linear-gradient(45deg, #87c145, #a8d96e);
+  background: linear-gradient(45deg, #a6ff4d, #a6ff4d);
   border: none;
   padding: 18px 30px;
   border-radius: 50px;
@@ -279,9 +279,9 @@
 }
 
 .newsletter-btn:hover {
-  background: linear-gradient(45deg, #6fa832, #87c145);
+  background: linear-gradient(45deg, #002852, #a6ff4d);
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(135, 193, 69, 0.4);
+  box-shadow: 0 10px 30px rgba(166, 255, 77, 0.4);
 }
 
 .newsletter-btn:active {
@@ -365,7 +365,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #87c145;
+  color: #a6ff4d;
   margin-bottom: 5px;
 }
 

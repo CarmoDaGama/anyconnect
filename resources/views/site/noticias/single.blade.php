@@ -5,7 +5,7 @@
 <div  data-aos="zoom-in" data-aos-duration="1000"  class="container-sm background-container" style="background-image: url(img/podcast.jpg); margin-top: 40px; border-radius:20px;">
     <div class="overlay" style="border-radius: 20px;"></div>
     <div class="content" style="padding: 150px 100px !important;">
-        <div class="efeito" style="border-left: 2px solid #87C145;">
+        <div class="efeito" style="border-left: 2px solid #a6ff4d;">
             <div style="margin-left: 10px;">
                 <h3 style="width: 50%;">Engenheiro Maximino Paca, CEO ANYCONNECT participa do Podcast Zwelando</h3>
                 <p class="mt-3">Início > Notícia </p>
@@ -17,13 +17,13 @@
 <div class="container py-5">
     <p style="text-align: center; font-size: 15px;">
         <span style="margin-right: 20px; color: #757575;"> <i
-                style="color: #87C145;" class="fas fa-clock"></i> há 30
+                style="color: #a6ff4d;" class="fas fa-clock"></i> há 30
             minutos</span>
         <span style="margin-right: 20px; color: #757575;"> <i
-                style="color: #87C145;" class="fas fa-eye"></i> 365
+                style="color: #a6ff4d;" class="fas fa-eye"></i> 365
         </span>
         <span style="margin-right: 20px; color: #757575;"> <i
-                style="color: #87C145;" class="fas fa-calendar"></i> 20
+                style="color: #a6ff4d;" class="fas fa-calendar"></i> 20
             de Novembro de 2024</span>
     </p>
 </div>

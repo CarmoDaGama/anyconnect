@@ -17,7 +17,7 @@
         .modal-header {
             border-bottom: none;
             /* Remove a linha de separação */
-            background: #87C145;
+            background: #a6ff4d;
             /* Cabeçalho com cor moderna */
             color: #fff;
             text-align: center;
@@ -65,7 +65,7 @@
         }
 
         .modal-footer button {
-            background: #87C145;
+            background: #a6ff4d;
             border: none;
             color: #fff;
             padding: 0.6rem 1.5rem;
@@ -76,7 +76,7 @@
         }
 
         .modal-footer button:hover {
-            background: #87C145;
+            background: #a6ff4d;
             /* Tom mais escuro no hover */
         }
 
@@ -145,7 +145,7 @@
     </div>
 
     <section class="container" style="margin-top: 100px; margin-bottom: 150px;">
-        <h1 class="text-center">Nossos <span style="color: #87C145;">Projectos</span></h1>
+        <h1 class="text-center">Nossos <span style="color: #a6ff4d;">Projectos</span></h1>
         <p class="text-center text-muted">Desenvolvemos projetos inovadores em telecomunicações, focando em soluções seguras
             e eficientes para atender às necessidades de nossos clientes. Trabalhamos com foco em resultados, ajudando
             empresas a alcançar seus objetivos com tecnologia de ponta.</p>

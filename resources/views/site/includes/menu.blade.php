@@ -41,8 +41,8 @@
 
     .nav-link-modern:hover,
     .nav-link-modern.active {
-        color: #87c145 !important;
-        background: rgba(135, 193, 69, 0.1);
+        color: #a6ff4d !important;
+        background: rgba(166, 255, 77, 0.1);
         transform: translateY(-2px);
     }
 
@@ -72,13 +72,13 @@
     }
 
     .hover-menu .dropdown-header {
-        color: #87c145 !important;
+        color: #a6ff4d !important;
         font-weight: 600;
         font-size: 0.9rem;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         padding: 0.75rem 1rem 0.25rem;
-        border-bottom: 1px solid rgba(135, 193, 69, 0.2);
+        border-bottom: 1px solid rgba(166, 255, 77, 0.2);
         margin-bottom: 0.25rem;
     }
 
@@ -92,14 +92,14 @@
     }
 
     .hover-menu .dropdown-item:hover {
-        background: rgba(135, 193, 69, 0.1);
-        color: #87c145;
+        background: rgba(166, 255, 77, 0.1);
+        color: #a6ff4d;
         transform: translateX(5px);
     }
 
     .hover-menu .dropdown-item i {
         width: 20px;
-        color: #87c145;
+        color: #a6ff4d;
         opacity: 0.7;
         transition: all 0.3s ease;
     }
@@ -111,7 +111,7 @@
 
     .hover-menu .dropdown-divider {
         margin: 0.5rem 1rem;
-        border-color: rgba(135, 193, 69, 0.2);
+        border-color: rgba(166, 255, 77, 0.2);
     }
 
     .dropdown-modern {
@@ -124,20 +124,20 @@
     }
 
     .btn-contact-modern {
-        background: linear-gradient(135deg, #87c145, #6fa832);
+        background: linear-gradient(135deg, #a6ff4d, #002852);
         color: white;
         border: none;
         border-radius: 25px;
         padding: 12px 25px;
         font-weight: 600;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(135, 193, 69, 0.3);
+        box-shadow: 0 4px 15px rgba(166, 255, 77, 0.3);
     }
 
     .btn-contact-modern:hover {
-        background: linear-gradient(135deg, #6fa832, #5a8c2a);
+        background: linear-gradient(135deg, #002852, #002852);
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(135, 193, 69, 0.4);
+        box-shadow: 0 6px 20px rgba(166, 255, 77, 0.4);
         color: white;
     }
 
@@ -213,7 +213,7 @@
     .navbar-toggler-modern {
         border: none;
         padding: 4px 8px;
-        background: rgba(135, 193, 69, 0.1);
+        background: rgba(166, 255, 77, 0.1);
         border-radius: 8px;
         z-index: 1055;
     }

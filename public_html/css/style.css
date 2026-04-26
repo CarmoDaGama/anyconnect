@@ -30,7 +30,7 @@
 /* Overlay para o texto */
 
 .overlay-imprensa {
-    background-color: rgba(135, 193, 69,1); /* Fundo verde com transparência */
+    background-color: rgba(166, 255, 77, 1); /* Fundo verde com transparência */
     color: rgb(255, 255, 255);
     font-weight: 600;
     padding: 10px 15px;

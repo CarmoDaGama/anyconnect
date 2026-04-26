@@ -5,7 +5,7 @@
 <div  data-aos="zoom-in" data-aos-duration="1000"  class="container-sm background-container" style="background-image: url(img/bg-pages.svg); margin-top: 40px; border-radius:20px;">
     <div class="overlay" style="border-radius: 20px;"></div>
     <div class="content" >
-        <div class="efeito" style="border-left: 2px solid #87C145;">
+        <div class="efeito" style="border-left: 2px solid #a6ff4d;">
             <div style="margin-left: 10px;">
                 <h3>Contactos</h3>
                 <p class="mt-3">Início > Contactos </p>
@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col"></div>
             <div class="col-3">
-                <a href="{{route('navigation.about')}}" class="text-center" style="text-decoration: none; background-color: #87C145; padding: 10px 20px; border-radius: 2px; color: white;">Sobre Nós <i style="margin-left: 5px;" class="far fa-lightbulb"></i> </a>
+                <a href="{{route('navigation.about')}}" class="text-center" style="text-decoration: none; background-color: #a6ff4d; padding: 10px 20px; border-radius: 2px; color: white;">Sobre Nós <i style="margin-left: 5px;" class="far fa-lightbulb"></i> </a>
             </div>
         </div>
     </div>
@@ -27,17 +27,17 @@
             <p>Estamos aqui para ajudar você! Se tiver alguma dúvida ou precisar de mais informações sobre nossos serviços, entre em contato conosco. Nossa equipe está pronta para oferecer suporte personalizado e garantir a melhor experiência possível.</p>
             <br>
             <ul style="list-style: none; margin-left: -30px;">
-                <li style="padding: 0; font-size: 17px;"><i class="fas fa-location-arrow" style="color: #87C145; margin-right: 10px;"></i>Belas Business Park, Ed. Bengo, 3º andar, Apt. 305</li>
+                <li style="padding: 0; font-size: 17px;"><i class="fas fa-location-arrow" style="color: #a6ff4d; margin-right: 10px;"></i>Belas Business Park, Ed. Bengo, 3º andar, Apt. 305</li>
                 <li style="padding: 0; font-size: 17px;" class="mt-2">
-                    <i class="fas fa-envelope-square" style="color: #87C145; margin-right: 5px;"></i>
+                    <i class="fas fa-envelope-square" style="color: #a6ff4d; margin-right: 5px;"></i>
                     comercial@anyconnect.co.ao
                 </li>
                 <li style="padding: 0; font-size: 17px;" class="mt-2">
-                    <i class="fas fa-envelope-square" style="color: #87C145; margin-right: 5px;"></i>
+                    <i class="fas fa-envelope-square" style="color: #a6ff4d; margin-right: 5px;"></i>
                     suporte@anyconnect.co.ao
                 </li>
                 <li style="padding: 0; font-size: 17px;" class="mt-2">
-                    <i class="fas fa-phone-volume" style="color: #87C145; margin-right: 5px;"></i>
+                    <i class="fas fa-phone-volume" style="color: #a6ff4d; margin-right: 5px;"></i>
                     (+244) 950 555 010
                 </li>
             </ul>
@@ -47,7 +47,7 @@
                 <input type="text" style="height: 50px;" class="form-control mb-4" name="" placeholder="Nome Completo">
                 <input type="text" style="height: 50px;" class="form-control mb-4" name="" placeholder="E-mail">
                 <textarea name="" id="" rows="5" class="form-control">Mensagem</textarea>
-                <button style="background-color: #87C145; border: none; color: white; padding: 10px 30px; border-radius: 5px;" class="mt-4">Enviar Mensagem</button>
+                <button style="background-color: #a6ff4d; border: none; color: white; padding: 10px 30px; border-radius: 5px;" class="mt-4">Enviar Mensagem</button>
             </form>
         </div>
     </div>

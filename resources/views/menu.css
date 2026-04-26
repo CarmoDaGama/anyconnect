@@ -1,14 +1,14 @@
 :root {
-    --primary-green: #87c145;
-    --dark-green: #6fa838;
-    --light-green: #a8d46f;
-    --text-dark: #2d3436;
-    --text-light: #636e72;
+    --primary-green: #a6ff4d;
+    --dark-green: #002852;
+    --light-green: #a6ff4d;
+    --text-dark: #4b4b4b;
+    --text-light: #4b4b4b;
     --white: #ffffff;
     --light-gray: #f8f9fa;
     --border-light: #e9ecef;
-    --shadow-light: 0 2px 20px rgba(135, 193, 69, 0.1);
-    --shadow-hover: 0 8px 30px rgba(135, 193, 69, 0.15);
+    --shadow-light: 0 2px 20px rgba(166, 255, 77, 0.1);
+    --shadow-hover: 0 8px 30px rgba(166, 255, 77, 0.15);
 }
 
 .navbar-anyconnect {
@@ -16,7 +16,7 @@
     background: var(--white);
     padding: 20px 40px;
     box-shadow: var(--shadow-light);
-    border: 1px solid rgba(135, 193, 69, 0.1);
+    border: 1px solid rgba(166, 255, 77, 0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1000;
@@ -44,14 +44,14 @@
 
 .navbar-anyconnect .navbar-nav .nav-link:hover {
     color: var(--primary-green);
-    background: rgba(135, 193, 69, 0.08);
+    background: rgba(166, 255, 77, 0.08);
     transform: translateY(-1px);
 }
 
 .navbar-anyconnect .navbar-nav .nav-link.active {
     color: var(--white);
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
-    box-shadow: 0 4px 12px rgba(135, 193, 69, 0.3);
+    box-shadow: 0 4px 12px rgba(166, 255, 77, 0.3);
 }
 
 .contact-btn-anyconnect {
@@ -63,14 +63,14 @@
     font-size: 0.9rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(135, 193, 69, 0.25);
+    box-shadow: 0 4px 12px rgba(166, 255, 77, 0.25);
     border: none;
     letter-spacing: 0.5px;
 }
 
 .contact-btn-anyconnect:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(135, 193, 69, 0.35);
+    box-shadow: 0 8px 20px rgba(166, 255, 77, 0.35);
     background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
 }
 
@@ -149,7 +149,7 @@
 .service-category-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(135, 193, 69, 0.3);
+    border-color: rgba(166, 255, 77, 0.3);
 }
 
 .service-category-card:hover::before {
@@ -180,7 +180,7 @@
 .service-items-list li {
     margin-bottom: 8px;
     padding: 6px 0;
-    border-bottom: 1px solid rgba(135, 193, 69, 0.1);
+    border-bottom: 1px solid rgba(166, 255, 77, 0.1);
     transition: all 0.2s ease;
 }
 
@@ -247,7 +247,7 @@
 }
 
 .simple-menu-item:hover {
-    background: rgba(135, 193, 69, 0.08);
+    background: rgba(166, 255, 77, 0.08);
     color: var(--primary-green);
     border-left-color: var(--primary-green);
     padding-left: 25px;
@@ -290,11 +290,11 @@
 }
 
 .navbar-toggler {
-    border: 1px solid rgba(135, 193, 69, 0.3);
+    border: 1px solid rgba(166, 255, 77, 0.3);
     border-radius: 8px;
     padding: 8px 12px;
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.2rem rgba(135, 193, 69, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(166, 255, 77, 0.25);
 }

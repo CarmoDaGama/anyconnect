@@ -58,7 +58,7 @@
     inset: 0;
     background:
         linear-gradient(100deg, rgba(5, 15, 30, 0.88) 0%, rgba(5, 15, 30, 0.62) 40%, rgba(5, 15, 30, 0.16) 78%),
-        radial-gradient(circle at 82% 18%, rgba(135, 193, 69, 0.2) 0%, transparent 40%);
+        radial-gradient(circle at 82% 18%, rgba(166, 255, 77, 0.2) 0%, transparent 40%);
 }
 
 .hero-slide__content {
@@ -78,8 +78,8 @@
     display: inline-flex;
     align-items: center;
     border-radius: 999px;
-    border: 1px solid rgba(135, 193, 69, 0.35);
-    background: rgba(135, 193, 69, 0.18);
+    border: 1px solid rgba(166, 255, 77, 0.35);
+    background: rgba(166, 255, 77, 0.18);
     color: #d6f2af;
     padding: 8px 18px;
     font-size: 12px;
@@ -125,7 +125,7 @@
 }
 
 .btn-primary-ac {
-    background: linear-gradient(135deg, #87c145, #699d35);
+    background: linear-gradient(135deg, #a6ff4d, #002852);
     color: #102007;
     box-shadow: 0 12px 30px rgba(105, 157, 53, 0.45);
 }
@@ -164,7 +164,7 @@
 
 .hero-carousel__indicators .active {
     opacity: 1;
-    background-color: #87c145;
+    background-color: #a6ff4d;
 }
 
 .hero-carousel__control {
