@@ -77,73 +77,90 @@
             overflow: hidden;
             box-shadow: var(--card-shadow);
             transition: var(--transition);
-            border: none;
+            border: 1px solid rgba(0,0,0,0.05);
             height: 100%;
-            position: relative;
+            display: flex;
+            flex-direction: column;
             cursor: pointer;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--primary-gradient);
-            transform: scaleX(0);
-            transition: var(--transition);
-        }
-
         .service-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
             box-shadow: var(--card-hover-shadow);
+            border-color: rgba(166, 255, 77, 0.3);
         }
 
-        .service-card:hover::before {
-            transform: scaleX(1);
+        .service-card-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
         }
 
         .service-card .card-img-top {
-            height: 200px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .service-card:hover .card-img-top {
-            transform: scale(1.05);
+            transform: scale(1.1);
+        }
+
+        .service-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-card-overlay {
+            opacity: 1;
         }
 
         .card-body {
             padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .card-title {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--text-color);
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
             margin-bottom: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .card-title {
+            color: var(--primary-color);
         }
 
         .card-text {
-            color: #4b4b4b;
+            color: #64748b;
             line-height: 1.6;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
         }
 
         .card-link {
-            color: var(--primary-color);
-            font-weight: 600;
+            color: var(--secondary-color);
+            font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             transition: var(--transition);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .card-link:hover {
-            color: #002852;
-            transform: translateX(5px);
+            color: var(--primary-color);
+            gap: 0.8rem;
         }
 
         .hero-content {
@@ -338,19 +355,36 @@
 
         <div class="services-grid">
             @foreach ($services as $item)
-                <div class="service-card" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
-                    <a href="{{ route('servico.show', $item->slug) }}" class="text-decoration-none">
-                        <img src="{{ asset('storage/'.$item->cover) }}" class="card-img-top" alt="{{ $item->title }}">
-                    </a>
+                @php
+                    $coverUrl = $item->cover && file_exists(public_path('storage/' . $item->cover)) 
+                        ? asset('storage/' . $item->cover) 
+                        : (file_exists(public_path('img/' . strtolower($item->title) . '.jpg'))
+                            ? asset('img/' . strtolower($item->title) . '.jpg')
+                            : asset('img/default-service.jpg'));
+                @endphp
+                <div class="service-card" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}" onclick="window.location.href='{{ route('servico.show', $item->slug) }}'">
+                    <div class="service-card-img-wrapper">
+                        <img src="{{ $coverUrl }}" class="card-img-top" alt="{{ $item->title }}">
+                        <div class="service-card-overlay"></div>
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">{{ $item->title }}</h5>
-                        <p class="card-text">{!! str()->limit($item->content, 120) !!}</p>
-                        <a href="{{ route('servico.show', $item->slug) }}" class="card-link">
-                            Ver mais <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <p class="card-text">{!! str()->limit(strip_tags($item->content), 120) !!}</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <a href="{{ route('servico.show', $item->slug) }}" class="card-link">
+                                Ver mais <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <span class="badge rounded-pill bg-light text-dark px-3 py-2 border">Serviço</span>
+                        </div>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        // Any specific scripts for this page
+    </script>
+@endpush

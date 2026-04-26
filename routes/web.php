@@ -20,7 +20,7 @@ Route::get('/', function () {
             $categoria->servicos = DB::table('servicos')
                 ->join('categoria_servico', 'servicos.id', '=', 'categoria_servico.servico_id')
                 ->where('categoria_servico.categoria_id', $categoria->id)
-                ->select('servicos.id', 'servicos.slug', 'servicos.title')
+                ->select('servicos.id', 'servicos.slug', 'servicos.title', 'servicos.cover')
                 ->orderBy('servicos.title')
                 ->get();
 

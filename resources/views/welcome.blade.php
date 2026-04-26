@@ -50,7 +50,11 @@
     <main>
         <!-- Unified Services Section with Tabs -->
         <section class="services-tabs-section" id="servicos">
-            <div class="container">
+            <!-- Decorative background elements -->
+            <div class="services-bg-glow services-bg-glow--left"></div>
+            <div class="services-bg-glow services-bg-glow--right"></div>
+
+            <div class="container position-relative">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <div class="section-badge mb-3">
                         <span class="badge-text">Inovação e Qualidade</span>
@@ -61,19 +65,22 @@
                     </p>
                 </div>
 
-                <div class="tabs-container" data-aos="fade-up">
+                <!-- Category Pills -->
+                <div class="tabs-container" data-aos="fade-up" data-aos-delay="100">
                     <div class="tabs-list" role="tablist">
                         @foreach ($categorias as $categoria)
                             <button class="tab-trigger {{ $loop->first ? 'active' : '' }}" role="tab"
                                 data-tab="tab-{{ $categoria->id }}"
                                 aria-selected="{{ $loop->first ? 'true' : 'false' }}">
+                                <span class="tab-dot"></span>
                                 {{ $categoria->nome }}
                             </button>
                         @endforeach
                     </div>
                 </div>
 
-                <div class="tabs-content" data-aos="fade-up">
+                <!-- Cards Grid -->
+                <div class="tabs-content" data-aos="fade-up" data-aos-delay="200">
                     @foreach ($categorias as $categoria)
                         <div class="tabs-content-item {{ $loop->first ? 'active' : '' }}" id="tab-{{ $categoria->id }}"
                             role="tabpanel">
@@ -82,25 +89,49 @@
                                     <div class="swiper-wrapper">
                                         @foreach ($categoria->servicos as $servico)
                                             <div class="swiper-slide">
-                                                <div class="service-card-modern" onclick="window.location.href='{{ route('servico.show', $servico->slug) }}'">
-                                                    <div class="card-image-wrapper"
-                                                        style="background-image: url('{{ asset('storage/' . ($servico->cover ?? 'img/default-service.jpg')) }}');">
-                                                        <div class="card-image-overlay"></div>
+                                                <div class="service-card-modern"
+                                                    onclick="window.location.href='{{ route('servico.show', $servico->slug) }}'">
+
+                                                    @php
+                                                        $coverUrl = $servico->cover && file_exists(public_path('storage/' . $servico->cover)) 
+                                                            ? asset('storage/' . $servico->cover) 
+                                                            : (file_exists(public_path('img/' . strtolower($servico->title) . '.jpg'))
+                                                                ? asset('img/' . strtolower($servico->title) . '.jpg')
+                                                                : asset('img/default-service.jpg'));
+                                                    @endphp
+
+                                                    <!-- Full-bleed image -->
+                                                    <div class="scard-image"
+                                                        style="background-image: url('{{ $coverUrl }}');"></div>
+
+                                                    <!-- Gradient overlay -->
+                                                    <div class="scard-overlay"></div>
+
+                                                    <!-- Always-visible label -->
+                                                    <div class="scard-category-badge">
+                                                        <i class="fas fa-bolt"></i> {{ $categoria->nome }}
                                                     </div>
-                                                    <div class="card-body-modern">
-                                                        <h4 class="card-title-modern">{{ $servico->title }}</h4>
-                                                        <p class="card-description-modern">
-                                                            {!! Str::limit(strip_tags($servico->content ?? 'Soluções avançadas para o seu negócio.'), 100) !!}
+
+                                                    <!-- Content revealed on hover -->
+                                                    <div class="scard-body">
+                                                        <h4 class="scard-title">{{ $servico->title }}</h4>
+                                                        <p class="scard-description">
+                                                            {!! Str::limit(strip_tags($servico->content ?? 'Soluções avançadas para o seu negócio.'), 110) !!}
                                                         </p>
                                                         <a href="{{ route('servico.show', $servico->slug) }}"
-                                                            class="card-link-modern">
-                                                            Saiba mais <i class="fas fa-arrow-right"></i>
+                                                            class="scard-link" onclick="event.stopPropagation()">
+                                                            <span>Saiba mais</span>
+                                                            <i class="fas fa-arrow-right"></i>
                                                         </a>
                                                     </div>
-                                                    <button class="card-button-modern"
-                                                        onclick="event.stopPropagation(); window.location.href='{{ route('navigation.contactos') }}'">
-                                                        Contactar
-                                                    </button>
+
+                                                    <!-- CTA bar -->
+                                                    <div class="scard-cta">
+                                                        <button class="scard-cta-btn"
+                                                            onclick="event.stopPropagation(); window.location.href='{{ route('navigation.contactos') }}'">
+                                                            <i class="fas fa-paper-plane me-2"></i>Contactar
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -114,6 +145,14 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+
+                <!-- CTA footer -->
+                <div class="text-center mt-5 pt-3" data-aos="fade-up" data-aos-delay="300">
+                    <a href="{{ route('navigation.services') }}" class="services-cta-link">
+                        <span>Ver todos os serviços</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -814,25 +853,35 @@
             @foreach ($categorias as $categoria)
                 new Swiper('.swiper-services-{{ $categoria->id }}', {
                     slidesPerView: 1,
-                    spaceBetween: 25,
-                    loop: false,
+                    spaceBetween: 24,
+                    loop: true,
+                    speed: 600,
+                    grabCursor: true,
                     pagination: {
                         el: '.swiper-services-{{ $categoria->id }} .swiper-pagination',
                         clickable: true,
+                        dynamicBullets: true,
                     },
                     navigation: {
                         nextEl: '.swiper-services-{{ $categoria->id }} .swiper-button-next',
                         prevEl: '.swiper-services-{{ $categoria->id }} .swiper-button-prev',
                     },
                     breakpoints: {
-                        640: {
+                        576: {
+                            slidesPerView: 1.4,
+                            spaceBetween: 20,
+                        },
+                        768: {
                             slidesPerView: 2,
+                            spaceBetween: 24,
                         },
                         1024: {
                             slidesPerView: 3,
+                            spaceBetween: 28,
                         },
                         1280: {
-                            slidesPerView: 4,
+                            slidesPerView: 3,
+                            spaceBetween: 32,
                         },
                     }
                 });
